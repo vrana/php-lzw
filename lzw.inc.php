@@ -36,7 +36,7 @@ function lzw_compress($string) {
 		$rest = ($rest << $bits) + $code;
 		$rest_length += $bits;
 		$dictionary_count++;
-		if ($dictionary_count > (1 << $bits)) {
+		if ($dictionary_count >> $bits) {
 			$bits++;
 		}
 		while ($rest_length > 7) {
@@ -67,7 +67,7 @@ function lzw_decompress($binary) {
 			$codes[] = $rest >> $rest_length;
 			$rest &= (1 << $rest_length) - 1;
 			$dictionary_count++;
-			if ($dictionary_count > (1 << $bits)) {
+			if ($dictionary_count >> $bits) {
 				$bits++;
 			}
 		}
