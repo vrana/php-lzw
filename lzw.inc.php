@@ -1,7 +1,7 @@
 <?php
 /** 
 * @link http://code.google.com/p/php-lzw/
-* @author Jakub Vrana, http://php.vrana.cz/
+* @author Jakub Vrana, http://www.vrana.cz/
 * @copyright 2009 Jakub Vrana
 * @license http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
 */
