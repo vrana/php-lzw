@@ -16,7 +16,7 @@ function lzw_compress($string) {
 	$word = "";
 	$codes = array();
 	for ($i=0; $i <= strlen($string); $i++) {
-		$x = $string[$i];
+		$x = substr($string, $i, 1);
 		if (strlen($x) && isset($dictionary[$word . $x])) {
 			$word .= $x;
 		} elseif ($i) {
